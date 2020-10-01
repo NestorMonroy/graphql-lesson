@@ -34,4 +34,4 @@ const CollectionsPageContainer = ({match}) => (
   </Query>
 )
 
-export default CollectionsPageContainer;
+export default CollectionsPageContainer
