@@ -8,20 +8,21 @@ import Spinner from '../../components/spinner/spinner.component';
 const GET_COLLECTION_BY_TITLE = gql`
     query getCollectionsByTitle($title: String!) {
         getCollectionsByTitle(title: $title) {
-            id
-            title
-            items {
-                id
-                name
-                price
-                imageUrl
+          id
+          title
+          items {
+              id
+              name
+              price
+              imageUrl
             }
         }
     }
 `;
 
+
 const CollectionsPageContainer = ({match}) => (
-    <Query
+  <Query
         query={GET_COLLECTION_BY_TITLE}
         variables={{ title: match.params.collectionId }}
     >
